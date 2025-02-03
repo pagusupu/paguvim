@@ -2,7 +2,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   plugins = {
     lsp = {
       enable = true;
@@ -10,7 +11,7 @@
         nil_ls = {
           enable = true;
           settings = {
-            formatting.command = ["${lib.getExe pkgs.alejandra}"];
+            formatting.command = [ "${lib.getExe pkgs.alejandra}" ];
             nix.flake.autoArchive = false;
           };
         };

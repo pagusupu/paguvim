@@ -7,7 +7,12 @@ _: {
     indent-blankline = {
       enable = true;
       settings = {
-        exclude.filetypes = ["checkhealth" "dashboard" "help" "''"];
+        exclude.filetypes = [
+          "checkhealth"
+          "dashboard"
+          "help"
+          "''"
+        ];
         scope.enabled = false;
       };
     };

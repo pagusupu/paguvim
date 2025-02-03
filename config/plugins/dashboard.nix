@@ -23,7 +23,7 @@ _: {
             action = "qa";
           }
         ];
-        footer = [" made with love & nix"];
+        footer = [ " made with love & nix" ];
       };
       theme = "doom";
     };

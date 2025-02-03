@@ -1,8 +1,10 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   perSystem.treefmt = {
     programs = {
-      alejandra.enable = true;
       deadnix.enable = true;
+      mdformat.enable = true;
+      nixfmt.enable = true;
       statix.enable = true;
     };
     settings.global.excludes = [
@@ -12,5 +14,5 @@
     flakeCheck = false;
     projectRootFile = "flake.nix";
   };
-  imports = [inputs.treefmt-nix.flakeModule];
+  imports = [ inputs.treefmt-nix.flakeModule ];
 }

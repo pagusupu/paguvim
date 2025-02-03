@@ -3,6 +3,7 @@
 ```sh
 nix run .
 ```
+
 or
 
 ```sh
@@ -24,5 +25,5 @@ environment.systemPackages = [
   inputs.paguvim.packages.${pkgs.system}.default
 ];
 ```
-thanks to [Ahwxorg](https://github.com/Ahwxorg/nixvim-config) which this repo is heavily based on
 
+thanks to [Ahwxorg](https://github.com/Ahwxorg/nixvim-config) which this repo is heavily based on
