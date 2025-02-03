@@ -1,19 +1,4 @@
 {
-  inputs = {
-    nixvim.url = "github:nix-community/nixvim";
-
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-    git-hooks-nix = {
-      url = "github:cachix/git-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    flake-parts.url = "github:hercules-ci/flake-parts";
-  };
   outputs =
     inputs:
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
@@ -46,4 +31,35 @@
         ./treefmt.nix
       ];
     };
+
+  inputs = {
+    nixvim.url = "github:nix-community/nixvim";
+
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
+    git-hooks-nix = {
+      url = "github:cachix/git-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
+    # input cleanup
+    nixvim.inputs = {
+      devshell.follows = "";
+      flake-compat.follows = "";
+      git-hooks.follows = "";
+      home-manager.follows = "";
+      nix-darwin.follows = "";
+      nuschtosSearch.follows = "";
+      treefmt-nix.follows = "";
+    };
+    git-hooks-nix.inputs = {
+      flake-compat.follows = "";
+      gitignore.follows = "";
+    };
+  };
 }
