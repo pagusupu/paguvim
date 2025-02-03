@@ -6,7 +6,10 @@
   }: {
     pre-commit.settings = {
       hooks = {
-        alejandra.enable = true;
+        alejandra = {
+          enable = true;
+          args = ["--silent"];
+        };
         deadnix.enable = true;
         statix.enable = true;
         nil.enable = true;
