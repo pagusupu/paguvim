@@ -30,10 +30,7 @@
           checks.default = check.mkTestDerivationFromNixvimModule nixvimModule;
           packages.default = nixvim.makeNixvimWithModule nixvimModule;
         };
-      imports = [
-        ./git-hooks.nix
-        ./treefmt.nix
-      ];
+      imports = [ ./parts ];
     };
 
   inputs = {
