@@ -1,10 +1,12 @@
 **testing**
 
+clone repo then run:
+
 ```sh
 nix run .
 ```
 
-or
+or just run:
 
 ```sh
 nix run github:pagusupu/paguvim
@@ -26,4 +28,4 @@ environment.systemPackages = [
 ];
 ```
 
-thanks to [Ahwxorg](https://github.com/Ahwxorg/nixvim-config) which this repo is heavily based on
+thanks to [Ahwxorg](https://github.com/Ahwxorg/nixvim-config)'s repo which this repo is heavily based on

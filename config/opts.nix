@@ -12,7 +12,7 @@ _: {
     swapfile = false;
     undofile = true;
 
-    # rest
+    # misc
     background = "dark";
     number = true;
     showmode = false;
