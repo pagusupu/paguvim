@@ -11,7 +11,7 @@
         nil_ls = {
           enable = true;
           settings = {
-            formatting.command = [ "${lib.getExe pkgs.alejandra} -q -c" ];
+            formatting.command = [ "${lib.getExe pkgs.alejandra}" ];
             nix.flake.autoArchive = false;
           };
         };
