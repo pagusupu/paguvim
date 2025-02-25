@@ -48,15 +48,9 @@
     };
 
     # input cleanup
-    nixvim.inputs = {
-      devshell.follows = "";
-      flake-compat.follows = "";
-      git-hooks.follows = "";
-      home-manager.follows = "";
-      nix-darwin.follows = "";
-      nuschtosSearch.follows = "";
-      treefmt-nix.follows = "";
-    };
+
+    nixvim.inputs.nuschtosSearch.follows = "";
+
     git-hooks-nix.inputs = {
       flake-compat.follows = "";
       gitignore.follows = "";
