@@ -7,7 +7,7 @@ _: {
         noice = true;
         notify = true;
       };
-      flavour = "frappe";
+      flavour = "mocha";
       transparent_background = true;
     };
   };

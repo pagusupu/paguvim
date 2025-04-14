@@ -9,8 +9,8 @@ _: {
     plugins = true;
   };
   extraConfigVim = ''
-    aun PopUp.How-to\ disable\ mouse
     aun PopUp.-1-
+    aun PopUp.How-to\ disable\ mouse
   '';
   enableMan = false;
   luaLoader.enable = true;
