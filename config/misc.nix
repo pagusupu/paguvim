@@ -10,6 +10,7 @@ _: {
   };
   extraConfigVim = ''
     aun PopUp.-1-
+    aun PopUp.-2-
     aun PopUp.How-to\ disable\ mouse
   '';
   enableMan = false;
