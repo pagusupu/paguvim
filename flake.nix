@@ -13,22 +13,18 @@
         "x86_64-linux"
       ];
       perSystem =
-        {
-          system,
-          pkgs,
-          ...
-        }:
+        { system, ... }:
         let
           nixvimModule = {
-            inherit pkgs;
+            inherit system;
             module = import ./config;
           };
-          inherit (inputs.nixvim.lib.${system}) check;
-          nixvim = inputs.nixvim.legacyPackages.${system};
+          mkTest = nixvim.lib.${system}.check.mkTestDerivationFromNixvimModule;
+          mkNvim = nixvim.legacyPackages.${system}.makeNixvimWithModule;
         in
         {
-          checks.default = check.mkTestDerivationFromNixvimModule nixvimModule;
-          packages.default = nixvim.makeNixvimWithModule nixvimModule;
+          checks.default = mkTest nixvimModule;
+          packages.default = mkNvim nixvimModule;
         };
       imports = [ ./parts ];
     };
@@ -45,15 +41,6 @@
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # input cleanup
-
-    nixvim.inputs.nuschtosSearch.follows = "";
-
-    git-hooks-nix.inputs = {
-      flake-compat.follows = "";
-      gitignore.follows = "";
     };
   };
 }
