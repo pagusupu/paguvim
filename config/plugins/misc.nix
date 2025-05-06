@@ -1,14 +1,9 @@
 _: {
-  colorschemes.catppuccin = {
+  colorschemes.rose-pine = {
     enable = true;
     settings = {
-      integrations = {
-        barbar = true;
-        noice = true;
-        notify = true;
-      };
-      flavour = "mocha";
-      transparent_background = true;
+      styles.italic = false;
+      variant = "main";
     };
   };
   plugins = {
