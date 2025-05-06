@@ -2,6 +2,34 @@ _: {
   colorschemes.rose-pine = {
     enable = true;
     settings = {
+      highlight_groups =
+        let
+          border = {
+            fg = "foam";
+            bg = "base";
+          };
+          body = {
+            bg = "base";
+          };
+        in
+        {
+          NotifyBackground = {
+            fg = "base";
+            bg = "base";
+          };
+          # ill clean this up when im not tired
+          NotifyDEBUGBorder = border;
+          NotifyDEBUGBody = body;
+          NotifyERRORBorder = border;
+          NotifyERRORbody = body;
+          NotifyINFOBorder = border;
+          NotifyINFOBody = body;
+          NotifyTRACEBorder = border;
+          NotifyTRACEBody = body;
+          NotifyWARNBorder = border;
+          NotifyWARNBody = body;
+        };
+      enable.legacy_highlights = false;
       styles.italic = false;
       variant = "main";
     };
