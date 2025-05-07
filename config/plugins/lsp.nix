@@ -4,7 +4,8 @@
   ...
 }:
 {
-  lsp = {
+  plugins.lsp = {
+    enable = true;
     servers = {
       nil_ls = {
         enable = true;
@@ -14,15 +15,16 @@
         };
       };
       cssls.enable = true;
+      fish_lsp.enable = true;
       html.enable = true;
       jsonls.enable = true;
       taplo.enable = true;
       yamlls.enable = true;
     };
-    inlayHints.enable = true;
+    #inlayHints.enable = true;
   };
   plugins = {
-    lspconfig.enable = true;
+    #lspconfig.enable = true;
     lsp-format.enable = true;
     lsp-lines.enable = true;
   };

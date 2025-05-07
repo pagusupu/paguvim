@@ -6,7 +6,7 @@ _: {
   performance.byteCompileLua = {
     enable = true;
     nvimRuntime = true;
-    plugins = true;
+    plugins = false;
   };
   extraConfigVim = ''
     aun PopUp.-1-
