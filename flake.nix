@@ -7,9 +7,6 @@
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
-        "aarch64-darwin"
-        "aarch64-linux"
-        "x86_64-darwin"
         "x86_64-linux"
       ];
       perSystem =
@@ -32,8 +29,6 @@
   inputs = {
     nixvim.url = "github:nix-community/nixvim";
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-
     git-hooks-nix = {
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,5 +37,6 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 }
